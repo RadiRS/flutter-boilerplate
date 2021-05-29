@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text('Home'),
+    return Scaffold(
+      body: Center(
+        child: Text('Flutter Boilerplate'),
+      ),
     );
   }
 }
