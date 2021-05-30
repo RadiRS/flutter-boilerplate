@@ -1,6 +1,8 @@
-# Boilerplate Flutter
+# Flutter Boilerplate
 
+![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 [![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 This is a boilerplate for flutter project which is include some configuration
 
@@ -89,13 +91,13 @@ flutter build ipa;
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/RadiRS/flutter-boilerplate) for details on our code of conduct, and the process for submitting pull requests to us.
 
 <p>&nbsp;</p>
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/RadiRS/flutter-boilerplate/tags).
 
 <p>&nbsp;</p>
 
@@ -103,7 +105,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 - **Radi Rusadi** - _Initial work_ - [RadiRS](https://github.com/RadiRS)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/RadiRS/flutter-boilerplate/contributors) who participated in this project.
 
 <p>&nbsp;</p>
 
