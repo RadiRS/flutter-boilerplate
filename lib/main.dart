@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/screens/screens.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,18 +14,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Flutter Boilerplate'),
-      ),
+      initialRoute: StarUpScreen.routeName,
+      routes: {
+        '/': (_) => HomeScreen(),
+        HomeScreen.routeName: (_) => HomeScreen(),
+      },
     );
   }
 }
