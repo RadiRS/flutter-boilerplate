@@ -1,5 +1,7 @@
 # Boilerplate Flutter
 
+[![style: lint](https://img.shields.io/badge/style-lint-4BC0F5.svg)](https://pub.dev/packages/lint)
+
 This is a boilerplate for flutter project which is include some configuration
 
 ## Getting Started

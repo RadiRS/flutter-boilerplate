@@ -9,6 +9,7 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   http: ^0.13.3
@@ -16,16 +17,15 @@ dependencies:
   provider: ^5.0.0
   shared_preferences: ^2.0.6
 
-  cupertino_icons: ^1.0.2
-
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_launcher_icons: ^0.9.0
   flutter_launcher_name:
     git:
       url: https://github.com/ride4sun/flutter_launcher_name
       ref: '0.9.1'
+  flutter_test:
+    sdk: flutter
+  lint: ^1.0.0
 
 flutter_launcher_name:
   name: 'FT Boilerplate'
