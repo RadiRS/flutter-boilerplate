@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/widgets/widgets.dart';
 
 class SettingScreen extends StatelessWidget {
   static String routeName = '/setting';
@@ -9,8 +10,15 @@ class SettingScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('Setting'),
       ),
-      body: Center(
-        child: Text('Setting Screen'),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ImgIcon(
+              ImageIcons.camera,
+              size: 30,
+            ),
+          ],
+        ),
       ),
     );
   }

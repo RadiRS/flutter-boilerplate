@@ -29,9 +29,11 @@ dev_dependencies:
     sdk: flutter
   lint: ^1.0.0
 
+# You can change the app_name from here
 flutter_launcher_name:
   name: 'FT Boilerplate'
 
+# You can change the app_icon from here
 flutter_icons:
   android: true
   ios: true
@@ -43,3 +45,10 @@ flutter_icons:
 flutter:
   uses-material-design: true
   generate: true
+
+  assets:
+    - assets/images/
+    - assets/images/icon/
+    # - assets/images/emoji/
+    # - assets/images/logos/
+    # - assets/images/landing_page/
