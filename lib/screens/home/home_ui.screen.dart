@@ -6,12 +6,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        child: Column(children: [
-          Text('Flutter Boilerplate'),
-          Text(AppLocalizations.of(context)!.helloWorld),
-        ]),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Center(
+        child: Text(AppLocalizations.of(context)!.helloWorld),
       ),
     );
   }
