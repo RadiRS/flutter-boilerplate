@@ -6,4 +6,5 @@ Map<String, Widget Function(BuildContext)> routes = {
   '/': (_) => TabsNavigator(),
   StarUpScreen.routeName: (_) => StarUpScreen(),
   HomeScreen.routeName: (_) => HomeScreen(),
+  SettingScreen.routeName: (_) => SettingScreen(),
 };
