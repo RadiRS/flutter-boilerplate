@@ -12,7 +12,13 @@ class HomeScreen extends StatelessWidget {
       appBar: MainAppBar('Home'),
       drawer: MainDrawer(),
       body: Center(
-        child: Text(AppLocalizations.of(context)!.helloWorld),
+        child: GestureDetector(
+          onTap: () => Toaster.showToast(
+            context,
+            AppLocalizations.of(context)!.helloWorld,
+          ),
+          child: Text(AppLocalizations.of(context)!.helloWorld),
+        ),
       ),
     );
   }
