@@ -22,6 +22,7 @@ class LabeledTextInput extends StatefulWidget {
     this.obscureText = false,
     this.autoFocus = false,
     this.maxLength,
+    this.decoration,
   }) : super(key: key);
 
   final String label;
@@ -37,6 +38,7 @@ class LabeledTextInput extends StatefulWidget {
   final List<String>? autofillHints;
   final bool obscureText;
   final bool autoFocus;
+  final InputDecoration? decoration;
 
   @override
   _LabeledTextInputState createState() => _LabeledTextInputState();
@@ -75,32 +77,33 @@ class _LabeledTextInputState extends State<LabeledTextInput> {
           minLines: widget.numLines,
           maxLines: widget.numLines,
           obscureText: widget.obscureText,
-          decoration: InputDecoration(
-            hintText: widget.hintText ?? "",
-            enabledBorder: OutlineInputBorder(
-              borderRadius: Corners.smBorder,
-              borderSide: BorderSide(
-                // color: theme.greyWeak,
-                width: 1,
-                style: BorderStyle.solid,
+          decoration: widget.decoration ??
+              InputDecoration(
+                hintText: widget.hintText ?? "",
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: Corners.smBorder,
+                  borderSide: BorderSide(
+                    // color: theme.greyWeak,
+                    width: 1,
+                    style: BorderStyle.solid,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderRadius: Corners.smBorder,
+                  borderSide: BorderSide(
+                    // color: theme.accent1,
+                    width: 1,
+                    style: BorderStyle.solid,
+                  ),
+                ),
+                contentPadding: EdgeInsets.only(
+                  left: Insets.med,
+                  right: Insets.med,
+                  top: Insets.lg + visualDensity.vertical * Insets.xs,
+                  bottom: Insets.lg + visualDensity.vertical * Insets.xs,
+                ),
+                isDense: true,
               ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: Corners.smBorder,
-              borderSide: BorderSide(
-                // color: theme.accent1,
-                width: 1,
-                style: BorderStyle.solid,
-              ),
-            ),
-            contentPadding: EdgeInsets.only(
-              left: Insets.med,
-              right: Insets.med,
-              top: Insets.lg + visualDensity.vertical * Insets.xs,
-              bottom: Insets.lg + visualDensity.vertical * Insets.xs,
-            ),
-            isDense: true,
-          ),
         ),
       ],
     );
