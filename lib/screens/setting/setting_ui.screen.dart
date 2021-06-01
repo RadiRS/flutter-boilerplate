@@ -12,6 +12,7 @@ class SettingScreen extends StatelessWidget {
         padding: EdgeInsets.all(8),
         child: Column(
           children: [
+            UiText(text: 'Asset Widget'),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -21,7 +22,12 @@ class SettingScreen extends StatelessWidget {
                 ),
                 LoadingIndicator()
               ],
-            )
+            ),
+            UiText(text: 'Form Widget'),
+            LabeledTextInput(
+              label: 'Input Your Name',
+              // numLines: 3,
+            ),
           ],
         ),
       ),
