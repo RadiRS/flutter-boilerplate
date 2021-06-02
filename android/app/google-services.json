@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "531749549647",
+    "firebase_url": "https://auth-c1b77.firebaseio.com",
+    "project_id": "auth-c1b77",
+    "storage_bucket": "auth-c1b77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531749549647:android:8090423eedf52626049c3a",
+        "android_client_info": {
+          "package_name": "com.example.flutter_boilerplate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531749549647-jvtp98o3h52qb17mf4v5oits786eudk6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgzsUqgJ0bwUCdBILlXaZSb4p3rw0_2OY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531749549647-jvtp98o3h52qb17mf4v5oits786eudk6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "531749549647-chf4cnjhtiunetbh9bd33kpd8fi3gubi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "id.modalrakyat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
