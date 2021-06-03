@@ -53,7 +53,7 @@ flutter:
     - assets/images/
     - assets/images/icon/
     # - assets/images/emoji/
-    # - assets/images/logos/
+    - assets/images/logo/
     # - assets/images/landing_page/
 
   # Set list app_fonts

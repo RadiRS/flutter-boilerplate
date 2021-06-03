@@ -10,6 +10,9 @@ class _TabsNavigatorState extends State<TabsNavigator> {
   final List<Widget> _screens = [
     HomeScreen(),
     SettingScreen(),
+    SettingScreen(),
+    SettingScreen(),
+    SettingScreen(),
   ];
 
   int _selectedIndex = 0;
@@ -28,12 +31,28 @@ class _TabsNavigatorState extends State<TabsNavigator> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             activeIcon: Icon(Icons.home),
-            label: 'Home',
+            label: 'Beranda',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.broken_image_outlined),
+            activeIcon: Icon(Icons.broken_image),
+            label: 'Portofolio',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.nature_outlined),
+            activeIcon: Icon(Icons.nature),
+            label: 'Peluang',
+            backgroundColor: Colors.amber,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.wallet_giftcard),
+            activeIcon: Icon(Icons.wallet_giftcard_outlined),
+            label: 'Dompet',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
             activeIcon: Icon(Icons.settings),
-            label: 'Setting',
+            label: 'Lainnya',
           ),
         ],
       ),

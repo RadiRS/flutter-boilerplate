@@ -154,6 +154,7 @@ class _MyAppState extends State<MyApp> {
       ],
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.light,
       ),
       routes: routes,
     );
