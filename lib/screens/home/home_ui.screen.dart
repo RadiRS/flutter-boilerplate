@@ -1,40 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/navigator/drawer_nav.dart';
 import 'package:flutter_boilerplate/widgets/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   static String routeName = 'home';
-  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey(); // Create a key
+  // final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey(); // Create a key
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xffebf0f3),
-      key: _scaffoldKey,
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        leading: Container(
-          padding: EdgeInsets.only(left: 16),
-          child: Image.asset('assets/images/logo/app-logo.png'),
-        ),
-        leadingWidth: double.infinity,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            color: Colors.blue,
-            icon: Icon(Icons.notifications_none),
-          ),
-          IconButton(
-            onPressed: () {
-              _scaffoldKey.currentState?.openEndDrawer();
-            },
-            color: Colors.blue,
-            icon: Icon(Icons.menu),
-          ),
-        ],
-      ),
-      endDrawer: MainDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -76,7 +50,9 @@ class Marketplaces extends StatelessWidget {
           ),
           VSpace.sm,
           _buildCardMarketplace(),
+          VSpace.sm,
           _buildCardMarketplace(),
+          VSpace.sm,
           _buildCardMarketplace(),
         ],
       ),
@@ -169,9 +145,14 @@ class Marketplaces extends StatelessWidget {
                   ),
                 ),
                 VSpace.med,
-                Container(
-                  height: 5,
-                  color: Colors.blueAccent,
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(2.5),
+                  child: LinearProgressIndicator(
+                    value: 0.4,
+                    backgroundColor: Colors.grey[300],
+                    color: Colors.blue,
+                    minHeight: 5,
+                  ),
                 ),
                 VSpace.sm,
                 Row(

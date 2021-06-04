@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/navigator/drawer_nav.dart';
 import 'package:flutter_boilerplate/screens/screens.dart';
 
 class TabsNavigator extends StatefulWidget {
@@ -17,10 +18,39 @@ class _TabsNavigatorState extends State<TabsNavigator> {
 
   int _selectedIndex = 0;
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey(); // Create a key
+
+  void onPressDrawerMenu() {
+    _scaffoldKey.currentState?.openEndDrawer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: Container(
+          padding: EdgeInsets.only(left: 16),
+          child: Image.asset('assets/images/logo/app-logo.png'),
+        ),
+        leadingWidth: double.infinity,
+        actions: [
+          IconButton(
+            onPressed: () {},
+            color: Colors.blue,
+            icon: Icon(Icons.notifications_none),
+          ),
+          IconButton(
+            onPressed: onPressDrawerMenu,
+            color: Colors.blue,
+            icon: Icon(Icons.menu),
+          )
+        ],
+      ),
       body: _screens[_selectedIndex],
+      endDrawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
