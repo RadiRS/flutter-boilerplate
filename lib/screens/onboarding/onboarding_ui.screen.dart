@@ -122,7 +122,7 @@ class SplashContent extends StatelessWidget {
         children: <Widget>[
           Spacer(),
           Text(
-            "TOKOTO",
+            "FT Boilerplate",
             style: TextStyle(
               fontSize: 36,
               // color: kPrimaryColor,
