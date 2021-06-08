@@ -9,25 +9,26 @@ environment:
   sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
-  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
+  cupertino_icons: ^1.0.2
   http: ^0.13.3
   intl: ^0.17.0
   provider: ^5.0.0
   shared_preferences: ^2.0.6
 
 dev_dependencies:
-  flutter_launcher_icons: ^0.9.0
+  flutter_test:
+    sdk: flutter
   flutter_launcher_name:
     git:
       url: https://github.com/ride4sun/flutter_launcher_name
-      ref: '0.9.1'
-  flutter_test:
-    sdk: flutter
+      ref: 0.9.1
+  flutter_launcher_icons: ^0.9.0
   lint: ^1.0.0
+  rename: ^1.3.1
 
 # You can change the app_name from here
 flutter_launcher_name:
