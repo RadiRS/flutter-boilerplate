@@ -31,13 +31,19 @@ class SettingScreen extends StatelessWidget {
             _buildSection(
               'Form Widget',
               children: [
-                LabeledTextInput(
+                TextInput(
                   label: 'Input Your Name',
                 ),
                 VSpace.lg,
-                LabeledTextInput(
+                TextInput(
                   label: 'Input Your password',
                   obscureText: true,
+                ),
+                VSpace.lg,
+                TextInput(
+                  hintText: 'Confirm your password',
+                  obscureText: true,
+                  textInputAction: TextInputAction.done,
                 ),
                 VSpace.lg,
                 FractionallySizedBox(
