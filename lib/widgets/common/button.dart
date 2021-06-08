@@ -12,6 +12,7 @@ class Button extends StatelessWidget {
   final ButtonType? type;
   final String label;
   final ButtonStyle? style;
+  final TextStyle? textStyle;
 
   const Button({
     Key? key,
@@ -20,6 +21,7 @@ class Button extends StatelessWidget {
     this.type,
     this.label = "",
     this.style,
+    this.textStyle,
   }) : super(key: key);
 
   @override
@@ -28,29 +30,32 @@ class Button extends StatelessWidget {
       case ButtonType.Elevated:
         return ElevatedButton(
           onPressed: onPressed,
-          child: Text(label),
+          child: _buildLabelText(),
           style: style ?? ElevatedButton.styleFrom(elevation: 0),
         );
 
       case ButtonType.Outline:
         return OutlinedButton(
-          child: Text(label),
+          child: _buildLabelText(),
           onPressed: onPressed,
           style: style ?? ButtonStyle(),
         );
 
       case ButtonType.Text:
         return TextButton(
-          child: Text(label),
+          child: _buildLabelText(),
           onPressed: onPressed,
           style: style ?? ButtonStyle(),
         );
 
       default:
         return TextButton(
-          child: Text(label),
+          child: _buildLabelText(),
           onPressed: onPressed,
+          style: style ?? ButtonStyle(),
         );
     }
   }
+
+  Text _buildLabelText() => Text(label, style: textStyle);
 }

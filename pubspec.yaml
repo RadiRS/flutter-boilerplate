@@ -47,10 +47,10 @@ flutter:
   generate: true
 
   assets:
-    - assets/images/
     - assets/images/icon/
+    - assets/images/logo/
+    - assets/images/ilustration/
     # - assets/images/emoji/
-    # - assets/images/logos/
     # - assets/images/landing_page/
 
   # Set list app_fonts
