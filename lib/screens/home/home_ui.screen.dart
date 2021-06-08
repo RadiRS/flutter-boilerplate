@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/navigator/drawer_nav.dart';
 import 'package:flutter_boilerplate/widgets/widgets.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   static String routeName = 'home';
@@ -15,9 +15,10 @@ class HomeScreen extends StatelessWidget {
         child: GestureDetector(
           onTap: () => Toaster.showToast(
             context,
-            AppLocalizations.of(context)!.helloWorld,
+            'Hello World',
+            // AppLocalizations.of(context)!.helloWorld,
           ),
-          child: Text(AppLocalizations.of(context)!.helloWorld),
+          // child: Text(AppLocalizations.of(context)!.helloWorld),
         ),
       ),
     );
