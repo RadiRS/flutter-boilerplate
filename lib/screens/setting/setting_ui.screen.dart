@@ -1,13 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/providers/theme_provider.dart';
 import 'package:flutter_boilerplate/widgets/widgets.dart';
+import 'package:provider/provider.dart';
 
 class SettingScreen extends StatelessWidget {
   static String routeName = '/setting';
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context);
+
     return Scaffold(
-      appBar: MainAppBar('Setting'),
+      appBar: MainAppBar(
+        'Setting',
+        actions: [
+          IconButton(
+            onPressed: () => theme.changeTheme(),
+            icon: Icon(theme.isLightTheme ? Icons.dark_mode : Icons.light_mode),
+          )
+        ],
+      ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(8),
         child: Column(

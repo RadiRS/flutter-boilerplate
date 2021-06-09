@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 class MainAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
   final Color? backgroundColor;
+  final List<Widget>? actions;
 
   const MainAppBar(
     this.title, {
     Key? key,
     this.backgroundColor,
+    this.actions,
   });
 
   // Overide the size height of AppBar
@@ -18,9 +20,8 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title),
-      centerTitle: false,
-      elevation: 0,
       backgroundColor: backgroundColor,
+      actions: actions,
     );
   }
 }
