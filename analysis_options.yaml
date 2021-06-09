@@ -7,8 +7,10 @@ linter:
     # Turn off what you don't like.         #
     # ------------------------------------- #
 
-    # Use parameter order as in json response
-    # always_put_required_named_parameters_first: false
+    # Use for disabled array to list
+    prefer_const_literals_to_create_immutables: false
+    # Use for disabled sorting dependencies
+    sort_pub_dependencies: false
 
     # ------ Enable individual rules ------ #
     #                 ---                   #
@@ -20,5 +22,4 @@ linter:
     # sort_constructors_first: true
 
     # The new tabs vs. spaces. Choose wisely
-    # prefer_single_quotes: true
-    # prefer_double_quotes: true
+    prefer_single_quotes: true

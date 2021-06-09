@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_boilerplate/navigator/routes.dart';
-import 'package:flutter_boilerplate/screens/onboarding/onboarding_ui.screen.dart';
 import 'package:flutter_boilerplate/theme/themes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
@@ -20,13 +19,6 @@ class MyApp extends StatelessWidget {
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
-
-    // Set Device Status Bar Style (Can't apply in here!)
-    // SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-    //   statusBarIconBrightness: Brightness.dark,
-    //   statusBarBrightness: Brightness.dark,
-    //   statusBarColor: Colors.amberAccent, // android only
-    // ));
 
     return MultiProvider(
       providers: [
@@ -50,7 +42,7 @@ class MyApp extends StatelessWidget {
             themeMode: theme.isLightTheme ? ThemeMode.light : ThemeMode.dark,
             theme: themeData(context),
             darkTheme: darkThemeData(context),
-            initialRoute: OnboardingScreen.routeName,
+            initialRoute: initialRoute,
             routes: routes,
           );
         },

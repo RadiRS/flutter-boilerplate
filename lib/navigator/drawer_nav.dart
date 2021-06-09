@@ -10,10 +10,10 @@ class MainDrawer extends StatelessWidget {
           Container(
             height: 120,
             width: double.infinity,
-            padding: EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
             color: Theme.of(context).accentColor,
-            child: Text(
+            child: const Text(
               'Drawer Menu!',
               style: TextStyle(
                 fontWeight: FontWeight.w900,
@@ -22,7 +22,7 @@ class MainDrawer extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           buildListTile('Home', Icons.home, () {
             Navigator.pushNamed(context, '/');
           }),

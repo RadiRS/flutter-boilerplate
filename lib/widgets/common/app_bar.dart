@@ -7,7 +7,6 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
 
   const MainAppBar(
     this.title, {
-    Key? key,
     this.backgroundColor,
     this.actions,
   });

@@ -7,9 +7,9 @@ class Toaster {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         behavior: SnackBarBehavior.floating,
-        duration: Duration(milliseconds: 1700),
+        duration: const Duration(milliseconds: 1700),
         content: Container(
-          padding: EdgeInsets.all(8),
+          padding: const EdgeInsets.all(8),
           child: Text(content),
         ),
       ),

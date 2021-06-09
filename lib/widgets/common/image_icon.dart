@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Set list of image icons from the asset/images/icon
 enum ImageIcons {
   camera,
-  app_icon,
+  appIcon,
 }
 
 class ImgIcon extends StatelessWidget {
@@ -12,14 +12,19 @@ class ImgIcon extends StatelessWidget {
   final double size;
   final Color? color;
 
-  const ImgIcon(this.icon, {Key? key, required this.size, this.color})
-      : super(key: key);
+  const ImgIcon(
+    this.icon, {
+    Key? key,
+    required this.size,
+    this.color,
+  }) : super(key: key);
 
+  @override
   Widget build(BuildContext c) {
-    String _ic = describeEnum(icon).toLowerCase().replaceAll("_", "-");
-    String _path = 'assets/images/icon/$_ic.png';
+    final String _ic = describeEnum(icon).toLowerCase().replaceAll('_', '-');
+    final String _path = 'assets/images/icon/$_ic.png';
 
-    return Container(
+    return SizedBox(
       width: size,
       height: size,
       child: Center(

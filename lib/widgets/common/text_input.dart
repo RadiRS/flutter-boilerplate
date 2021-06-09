@@ -10,7 +10,7 @@ class TextInput extends StatefulWidget {
   const TextInput({
     Key? key,
     this.text,
-    this.label = "",
+    this.label = '',
     this.onChanged,
     this.onSubmit,
     this.onSaved,
@@ -57,7 +57,7 @@ class _TextInputState extends State<TextInput> {
   Widget build(BuildContext context) {
     // AppTheme theme = context as AppTheme;
 
-    VisualDensity visualDensity = Theme.of(context).visualDensity;
+    final VisualDensity visualDensity = Theme.of(context).visualDensity;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -91,22 +91,15 @@ class _TextInputState extends State<TextInput> {
           style: widget.style ?? TextStyles.body2,
           decoration: widget.decoration ??
               InputDecoration(
-                hintText: widget.hintText ?? "",
-                enabledBorder: OutlineInputBorder(
+                hintText: widget.hintText ?? '',
+                enabledBorder: const OutlineInputBorder(
                   borderRadius: Corners.smBorder,
                   borderSide: BorderSide(
-                    // color: theme.greyWeak,
-                    width: 1,
-                    style: BorderStyle.solid,
+                    color: Colors.grey,
                   ),
                 ),
-                focusedBorder: OutlineInputBorder(
+                focusedBorder: const OutlineInputBorder(
                   borderRadius: Corners.smBorder,
-                  borderSide: BorderSide(
-                    // color: theme.accent1,
-                    width: 1,
-                    style: BorderStyle.solid,
-                  ),
                 ),
                 contentPadding: EdgeInsets.only(
                   left: Insets.med,

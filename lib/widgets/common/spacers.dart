@@ -5,7 +5,7 @@ class Space extends StatelessWidget {
   final double width;
   final double height;
 
-  Space(this.width, this.height);
+  const Space(this.width, this.height);
 
   @override
   Widget build(BuildContext context) => SizedBox(width: width, height: height);
@@ -19,11 +19,11 @@ class VSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Space(0, size);
 
-  static VSpace get xs => VSpace(Insets.xs);
-  static VSpace get sm => VSpace(Insets.sm);
-  static VSpace get med => VSpace(Insets.med);
-  static VSpace get lg => VSpace(Insets.lg);
-  static VSpace get xl => VSpace(Insets.xl);
+  static final VSpace xs = VSpace(Insets.xs);
+  static final VSpace sm = VSpace(Insets.sm);
+  static final VSpace med = VSpace(Insets.med);
+  static final VSpace lg = VSpace(Insets.lg);
+  static final VSpace xl = VSpace(Insets.xl);
 }
 
 class HSpace extends StatelessWidget {
@@ -34,9 +34,9 @@ class HSpace extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Space(size, 0);
 
-  static HSpace get xs => HSpace(Insets.xs);
-  static HSpace get sm => HSpace(Insets.sm);
-  static HSpace get med => HSpace(Insets.med);
-  static HSpace get lg => HSpace(Insets.lg);
-  static HSpace get xl => HSpace(Insets.xl);
+  static final HSpace xs = HSpace(Insets.xs);
+  static final HSpace sm = HSpace(Insets.sm);
+  static final HSpace med = HSpace(Insets.med);
+  static final HSpace lg = HSpace(Insets.lg);
+  static final HSpace xl = HSpace(Insets.xl);
 }

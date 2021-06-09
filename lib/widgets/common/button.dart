@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 enum ButtonType {
-  Text,
-  Outline,
-  Elevated,
+  text,
+  outline,
+  elevated,
 }
 
 class Button extends StatelessWidget {
@@ -19,7 +19,7 @@ class Button extends StatelessWidget {
     this.child,
     this.onPressed,
     this.type,
-    this.label = "",
+    this.label = '',
     this.style,
     this.textStyle,
   }) : super(key: key);
@@ -27,32 +27,32 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (type) {
-      case ButtonType.Elevated:
+      case ButtonType.elevated:
         return ElevatedButton(
           onPressed: onPressed,
-          child: _buildLabelText(),
           style: style ?? ElevatedButton.styleFrom(elevation: 0),
+          child: _buildLabelText(),
         );
 
-      case ButtonType.Outline:
+      case ButtonType.outline:
         return OutlinedButton(
-          child: _buildLabelText(),
           onPressed: onPressed,
-          style: style ?? ButtonStyle(),
+          style: style ?? const ButtonStyle(),
+          child: _buildLabelText(),
         );
 
-      case ButtonType.Text:
+      case ButtonType.text:
         return TextButton(
-          child: _buildLabelText(),
           onPressed: onPressed,
-          style: style ?? ButtonStyle(),
+          style: style ?? const ButtonStyle(),
+          child: _buildLabelText(),
         );
 
       default:
         return TextButton(
-          child: _buildLabelText(),
           onPressed: onPressed,
-          style: style ?? ButtonStyle(),
+          style: style ?? const ButtonStyle(),
+          child: _buildLabelText(),
         );
     }
   }

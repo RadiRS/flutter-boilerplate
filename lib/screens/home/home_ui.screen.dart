@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar('Home'),
+      appBar: const MainAppBar('Home'),
       drawer: MainDrawer(),
       body: Center(
         child: GestureDetector(

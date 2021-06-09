@@ -21,7 +21,7 @@ class SettingScreen extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(8),
+        padding: const EdgeInsets.all(8),
         child: Column(
           children: [
             _buildSection(
@@ -30,12 +30,20 @@ class SettingScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    ImgIcon(
+                    const ImgIcon(
                       ImageIcons.camera,
                       size: 30,
                     ),
-                    LoadingIndicator()
+                    const LoadingIndicator(),
                   ],
+                ),
+                VSpace.lg,
+                const GradientContainer(
+                  [Colors.blue, Colors.red],
+                  [0, 2],
+                  width: double.infinity,
+                  height: 50,
+                  child: Text('Gradient'),
                 )
               ],
             ),
@@ -43,16 +51,16 @@ class SettingScreen extends StatelessWidget {
             _buildSection(
               'Form Widget',
               children: [
-                TextInput(
+                const TextInput(
                   label: 'Input Your Name',
                 ),
                 VSpace.lg,
-                TextInput(
+                const TextInput(
                   label: 'Input Your password',
                   obscureText: true,
                 ),
                 VSpace.lg,
-                TextInput(
+                const TextInput(
                   hintText: 'Confirm your password',
                   obscureText: true,
                   textInputAction: TextInputAction.done,
@@ -61,23 +69,23 @@ class SettingScreen extends StatelessWidget {
                 FractionallySizedBox(
                   widthFactor: 0.5,
                   child: Button(
-                    type: ButtonType.Elevated,
-                    label: "Login",
-                    onPressed: () => null,
+                    type: ButtonType.elevated,
+                    label: 'Login',
+                    onPressed: () {},
                   ),
                 ),
-                Button(
-                  type: ButtonType.Elevated,
+                const Button(
+                  type: ButtonType.elevated,
                   label: 'Disabled',
                 ),
                 Button(
-                  type: ButtonType.Outline,
-                  label: "Register",
-                  onPressed: () => null,
+                  type: ButtonType.elevated,
+                  label: 'Register',
+                  onPressed: () {},
                 ),
                 Button(
-                  label: "Forgot Password",
-                  onPressed: () => null,
+                  label: 'Forgot Password',
+                  onPressed: () {},
                 ),
               ],
             ),
@@ -89,18 +97,16 @@ class SettingScreen extends StatelessWidget {
 
   Widget _buildSection(String title, {required List<Widget> children}) {
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        // color: C,
         borderRadius: BorderRadius.circular(8.0),
-        border: Border.all(
-          width: 1,
-          color: Colors.blueGrey,
-          style: BorderStyle.solid,
-        ),
+        border: Border.all(color: Colors.blueGrey),
       ),
       child: Column(
-        children: [UiText(text: title), ...children.toList()],
+        children: [
+          UiText(text: title),
+          ...children.toList(),
+        ],
       ),
     );
   }

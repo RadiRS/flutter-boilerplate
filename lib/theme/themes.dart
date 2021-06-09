@@ -9,15 +9,15 @@ ThemeData themeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     accentColor: kAccentLightColor,
     scaffoldBackgroundColor: Colors.white,
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       secondary: kSecondaryLightColor,
       // on light theme surface = Colors.white by default
     ),
     backgroundColor: Colors.white,
-    iconTheme: IconThemeData(color: kBodyTextColorLight),
-    accentIconTheme: IconThemeData(color: kAccentIconLightColor),
-    primaryIconTheme: IconThemeData(color: kPrimaryIconLightColor),
-    textTheme: TextTheme(
+    iconTheme: const IconThemeData(color: kBodyTextColorLight),
+    accentIconTheme: const IconThemeData(color: kAccentIconLightColor),
+    primaryIconTheme: const IconThemeData(color: kPrimaryIconLightColor),
+    textTheme: const TextTheme(
       bodyText1: TextStyle(color: kBodyTextColorLight),
       bodyText2: TextStyle(color: kBodyTextColorLight),
       headline4: TextStyle(color: kTitleTextLightColor, fontSize: 32),
@@ -32,17 +32,17 @@ ThemeData darkThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     accentColor: kAccentDarkColor,
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: Color(0xFF0D0C0E),
+    scaffoldBackgroundColor: const Color(0xFF0D0C0E),
     appBarTheme: appBarTheme,
-    colorScheme: ColorScheme.light(
+    colorScheme: const ColorScheme.light(
       secondary: kSecondaryDarkColor,
       surface: kSurfaceDarkColor,
     ),
     backgroundColor: kBackgroundDarkColor,
-    iconTheme: IconThemeData(color: kBodyTextColorDark),
-    accentIconTheme: IconThemeData(color: kAccentIconDarkColor),
-    primaryIconTheme: IconThemeData(color: kPrimaryIconDarkColor),
-    textTheme: TextTheme(
+    iconTheme: const IconThemeData(color: kBodyTextColorDark),
+    accentIconTheme: const IconThemeData(color: kAccentIconDarkColor),
+    primaryIconTheme: const IconThemeData(color: kPrimaryIconDarkColor),
+    textTheme: const TextTheme(
       bodyText1: TextStyle(color: kBodyTextColorDark),
       bodyText2: TextStyle(color: kBodyTextColorDark),
       headline4: TextStyle(color: kTitleTextDarkColor, fontSize: 32),
@@ -51,7 +51,7 @@ ThemeData darkThemeData(BuildContext context) {
   );
 }
 
-AppBarTheme appBarTheme = AppBarTheme(
+AppBarTheme appBarTheme = const AppBarTheme(
   color: Colors.transparent,
   elevation: 0,
   centerTitle: false,

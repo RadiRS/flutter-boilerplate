@@ -15,26 +15,26 @@ class StringUtils {
 
   // Measures text using an off-screen canvas. It's not fast, but not overly slow either. Use with (mild) caution :)
   static Size measure(String text, TextStyle style,
-      {int maxLines: 1,
+      {int maxLines = 1,
       TextDirection direction = TextDirection.ltr,
       double maxWidth = double.infinity}) {
     final TextPainter textPainter = TextPainter(
         text: TextSpan(text: text, style: style),
         maxLines: maxLines,
         textDirection: direction)
-      ..layout(minWidth: 0, maxWidth: maxWidth);
+      ..layout(maxWidth: maxWidth);
     return textPainter.size;
   }
 
   // Measures longest text item in a list of Strings. Useful for things like Dropdown Menu, where you just want to take up as much space as the content requires.
   static double measureLongest(List<String> items, TextStyle style,
-      [int? maxItems = null]) {
+      [int? maxItems]) {
     double l = 0;
     if (maxItems != null && maxItems < items.length) {
       items.length = maxItems;
     }
-    for (var item in items) {
-      double m = measure(item, style).width;
+    for (final item in items) {
+      final double m = measure(item, style).width;
       if (m > l) l = m;
     }
     return l;
@@ -42,18 +42,18 @@ class StringUtils {
 
   /// Gracefully handles null values, and skips the suffix when null
   static String safeGet(String? value, [String? suffix]) {
-    return (value ?? "") + (!isEmpty(value) ? suffix ?? "" : "");
+    return (value ?? '') + (!isEmpty(value) ? suffix ?? '' : '');
   }
 
   static String pluralize(String s, int length) {
     if (length == 1) return s;
-    return s + "s";
+    return '${s}s';
   }
 
   static String titleCaseSingle(String s) =>
       '${s[0].toUpperCase()}${s.substring(1)}';
   static String titleCase(String s) =>
-      s.split(" ").map(titleCaseSingle).join(" ");
+      s.split(' ').map(titleCaseSingle).join(' ');
 
   static String defaultOnEmpty(String? value, String defaultValue) =>
       isEmpty(value) ? defaultValue : value!;

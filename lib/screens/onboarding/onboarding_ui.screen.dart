@@ -13,18 +13,18 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   int currentPage = 0;
   List<Map<String, String>> onboardingData = [
     {
-      "text": "Welcome to FT Boilerplate!",
-      "image": "assets/images/ilustration/ilus_1.png"
+      'text': 'Welcome to FT Boilerplate!',
+      'image': 'assets/images/ilustration/ilus_1.png'
     },
     {
-      "text":
-          "Dolores enim quod incidunt quasi aperiam quaerat aut consequuntur ullam.",
-      "image": "assets/images/ilustration/ilus_2.png"
+      'text':
+          'Dolores enim quod incidunt quasi aperiam quaerat aut consequuntur ullam.',
+      'image': 'assets/images/ilustration/ilus_2.png'
     },
     {
-      "text":
-          "Eveniet illum provident optio et officiis occaecati sed aut qui.",
-      "image": "assets/images/ilustration/ilus_1.png"
+      'text':
+          'Eveniet illum provident optio et officiis occaecati sed aut qui.',
+      'image': 'assets/images/ilustration/ilus_1.png'
     },
   ];
 
@@ -44,7 +44,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   },
                   itemCount: onboardingData.length,
                   itemBuilder: (context, index) => SplashContent(
-                    image: onboardingData[index]["image"],
+                    image: onboardingData[index]['image'],
                     text: onboardingData[index]['text'],
                   ),
                 ),
@@ -52,10 +52,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               Expanded(
                 flex: 2,
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: Column(
                     children: <Widget>[
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: List.generate(
@@ -63,12 +63,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           (index) => buildDot(index: index),
                         ),
                       ),
-                      Spacer(flex: 3),
+                      const Spacer(flex: 3),
                       SizedBox(
                         width: double.infinity,
                         child: Button(
-                          label: "Continue",
-                          textStyle: TextStyle(color: Colors.white),
+                          label: 'Continue',
+                          textStyle: const TextStyle(color: Colors.white),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.orange,
                             shape: RoundedRectangleBorder(
@@ -80,7 +80,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                           },
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                     ],
                   ),
                 ),
@@ -94,12 +94,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   AnimatedContainer buildDot({int? index}) {
     return AnimatedContainer(
-      duration: Duration(milliseconds: 200),
-      margin: EdgeInsets.only(right: 5),
+      duration: const Duration(milliseconds: 200),
+      margin: const EdgeInsets.only(right: 5),
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? Colors.blue : Color(0xFFD8D8D8),
+        color: currentPage == index ? Colors.blue : const Color(0xFFD8D8D8),
         borderRadius: BorderRadius.circular(3),
       ),
     );
@@ -120,9 +120,9 @@ class SplashContent extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: Column(
         children: <Widget>[
-          Spacer(),
-          Text(
-            "FT Boilerplate",
+          const Spacer(),
+          const Text(
+            'FT Boilerplate',
             style: TextStyle(
               fontSize: 36,
               // color: kPrimaryColor,
@@ -130,12 +130,12 @@ class SplashContent extends StatelessWidget {
             ),
           ),
           Text(
-            text ?? "",
+            text ?? '',
             textAlign: TextAlign.center,
           ),
-          Spacer(flex: 2),
+          const Spacer(flex: 2),
           Image.asset(
-            image ?? "",
+            image ?? '',
             height: 265,
             width: 235,
           ),
