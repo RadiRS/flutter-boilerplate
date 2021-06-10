@@ -10,6 +10,7 @@ class _TabsNavigatorState extends State<TabsNavigator> {
   final List<Widget> _screens = [
     HomeScreen(),
     SettingScreen(),
+    const WebviewScreen(),
   ];
 
   int _selectedIndex = 0;
@@ -34,6 +35,11 @@ class _TabsNavigatorState extends State<TabsNavigator> {
             icon: Icon(Icons.settings_outlined),
             activeIcon: Icon(Icons.settings),
             label: 'Setting',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.web_outlined),
+            activeIcon: Icon(Icons.web),
+            label: 'WEB',
           ),
         ],
       ),

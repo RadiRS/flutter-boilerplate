@@ -9,6 +9,8 @@ final Map<String, Widget Function(BuildContext)> routes = {
   OnboardingScreen.routeName: (_) => OnboardingScreen(),
   HomeScreen.routeName: (_) => HomeScreen(),
   SettingScreen.routeName: (_) => SettingScreen(),
+  SettingScreen.routeName: (_) => SettingScreen(),
+  WebviewScreen.routeName: (_) => const WebviewScreen(),
 };
 
 final String initialRoute = OnboardingScreen.routeName;
