@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/navigator/drawer_nav.dart';
 import 'package:flutter_boilerplate/screens/screens.dart';
+import 'package:flutter_boilerplate/widgets/widgets.dart';
 
 class TabsNavigator extends StatefulWidget {
   @override
@@ -18,6 +20,8 @@ class _TabsNavigatorState extends State<TabsNavigator> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: _selectedIndex == 0 ? const MainAppBar('Home') : null,
+      drawer: MainDrawer(),
       body: _screens[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
@@ -39,7 +43,7 @@ class _TabsNavigatorState extends State<TabsNavigator> {
           BottomNavigationBarItem(
             icon: Icon(Icons.web_outlined),
             activeIcon: Icon(Icons.web),
-            label: 'WEB',
+            label: 'Web',
           ),
         ],
       ),

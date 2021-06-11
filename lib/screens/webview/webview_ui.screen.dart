@@ -30,7 +30,7 @@ class WebviewScreen extends StatelessWidget {
         title: const Text('Webview'),
         // This drop down menu demonstrates that Flutter widgets can be shown over the web view.
         actions: <Widget>[
-          NavigationControls(_controller.future),
+          // NavigationControls(_controller.future),
           SampleMenu(_controller.future),
         ],
       ),

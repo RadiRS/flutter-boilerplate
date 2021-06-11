@@ -24,17 +24,21 @@ class MainDrawer extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           buildListTile('Home', Icons.home, () {
-            Navigator.pushNamed(context, '/');
+            Navigator.pushReplacementNamed(context, '/');
           }),
-          buildListTile('Setting', Icons.settings, () {
-            Navigator.pushNamed(context, SettingScreen.routeName);
+          buildListTile('Device Info', Icons.settings, () {
+            Navigator.pushReplacementNamed(context, DeviceInfoScreen.routeName);
           }),
         ],
       ),
     );
   }
 
-  ListTile buildListTile(String title, IconData icon, Function()? tabHandler) {
+  ListTile buildListTile(
+    String title,
+    IconData icon,
+    Function()? tabHandler,
+  ) {
     return ListTile(
       leading: Icon(icon, size: 26),
       title: Text(
