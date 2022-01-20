@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Toaster {
+mixin Toaster {
   static void showToast(BuildContext context, String content) {
     ScaffoldMessenger.of(context).clearSnackBars();
 

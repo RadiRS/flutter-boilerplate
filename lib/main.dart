@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_boilerplate/navigator/routes.dart';
+import 'package:flutter_boilerplate/providers/providers.dart';
 import 'package:flutter_boilerplate/theme/themes.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_boilerplate/providers/providers.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {

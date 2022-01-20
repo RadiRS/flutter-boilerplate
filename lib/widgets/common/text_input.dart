@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_boilerplate/theme/styles.dart';
 // import 'package:flutter_boilerplate/theme/themes.dart';
 import 'package:flutter_boilerplate/utils/string_utils.dart';
-import 'package:flutter_boilerplate/widgets/common/ui_text.dart';
 import 'package:flutter_boilerplate/widgets/widgets.dart';
 
 class TextInput extends StatefulWidget {

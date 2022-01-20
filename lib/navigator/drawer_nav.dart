@@ -12,7 +12,7 @@ class MainDrawer extends StatelessWidget {
             width: double.infinity,
             padding: const EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             child: const Text(
               'Drawer Menu!',
               style: TextStyle(

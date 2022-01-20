@@ -7,7 +7,7 @@ ThemeData themeData(BuildContext context) {
   return ThemeData(
     appBarTheme: appBarTheme,
     primaryColor: kPrimaryColor,
-    accentColor: kAccentLightColor,
+    //accentColor: kAccentLightColor,
     scaffoldBackgroundColor: Colors.white,
     colorScheme: const ColorScheme.light(
       secondary: kSecondaryLightColor,
@@ -15,7 +15,7 @@ ThemeData themeData(BuildContext context) {
     ),
     backgroundColor: Colors.white,
     iconTheme: const IconThemeData(color: kBodyTextColorLight),
-    accentIconTheme: const IconThemeData(color: kAccentIconLightColor),
+    //accentIconTheme: const IconThemeData(color: kAccentIconLightColor),
     primaryIconTheme: const IconThemeData(color: kPrimaryIconLightColor),
     textTheme: const TextTheme(
       bodyText1: TextStyle(color: kBodyTextColorLight),
@@ -30,7 +30,7 @@ ThemeData themeData(BuildContext context) {
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
     primaryColor: kPrimaryColor,
-    accentColor: kAccentDarkColor,
+    //accentColor: kAccentDarkColor,
     brightness: Brightness.dark,
     scaffoldBackgroundColor: const Color(0xFF0D0C0E),
     appBarTheme: appBarTheme,
@@ -40,7 +40,7 @@ ThemeData darkThemeData(BuildContext context) {
     ),
     backgroundColor: kBackgroundDarkColor,
     iconTheme: const IconThemeData(color: kBodyTextColorDark),
-    accentIconTheme: const IconThemeData(color: kAccentIconDarkColor),
+    //accentIconTheme: const IconThemeData(color: kAccentIconDarkColor),
     primaryIconTheme: const IconThemeData(color: kPrimaryIconDarkColor),
     textTheme: const TextTheme(
       bodyText1: TextStyle(color: kBodyTextColorDark),
