@@ -12,18 +12,13 @@ class OnboardingScreen extends StatefulWidget {
 class _OnboardingScreenState extends State<OnboardingScreen> {
   int currentPage = 0;
   List<Map<String, String>> onboardingData = [
+    {'text': 'Welcome to FT Boilerplate!', 'image': 'assets/images/ilustration/ilus_1.png'},
     {
-      'text': 'Welcome to FT Boilerplate!',
-      'image': 'assets/images/ilustration/ilus_1.png'
-    },
-    {
-      'text':
-          'Dolores enim quod incidunt quasi aperiam quaerat aut consequuntur ullam.',
+      'text': 'Dolores enim quod incidunt quasi aperiam quaerat aut consequuntur ullam.',
       'image': 'assets/images/ilustration/ilus_2.png'
     },
     {
-      'text':
-          'Eveniet illum provident optio et officiis occaecati sed aut qui.',
+      'text': 'Eveniet illum provident optio et officiis occaecati sed aut qui.',
       'image': 'assets/images/ilustration/ilus_1.png'
     },
   ];
