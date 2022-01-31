@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'colors.dart';
+import 'package:flutter_boilerplate/theme/colors.dart';
 
 // Our light/Primary Theme
 ThemeData themeData(BuildContext context) {

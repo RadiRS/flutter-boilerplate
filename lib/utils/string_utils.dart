@@ -6,20 +6,33 @@ mixin StringUtils {
 
   static bool isEmail(String? value) {
     if (isEmpty(value)) return false;
-    return RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+").hasMatch(value!);
+    return RegExp(
+      r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+    ).hasMatch(value!);
   }
 
   // Measures text using an off-screen canvas. It's not fast, but not overly slow either. Use with (mild) caution :)
-  static Size measure(String text, TextStyle style,
-      {int maxLines = 1, TextDirection direction = TextDirection.ltr, double maxWidth = double.infinity}) {
-    final TextPainter textPainter =
-        TextPainter(text: TextSpan(text: text, style: style), maxLines: maxLines, textDirection: direction)
-          ..layout(maxWidth: maxWidth);
+  static Size measure(
+    String text,
+    TextStyle style, {
+    int maxLines = 1,
+    TextDirection direction = TextDirection.ltr,
+    double maxWidth = double.infinity,
+  }) {
+    final TextPainter textPainter = TextPainter(
+      text: TextSpan(text: text, style: style),
+      maxLines: maxLines,
+      textDirection: direction,
+    )..layout(maxWidth: maxWidth);
     return textPainter.size;
   }
 
   // Measures longest text item in a list of Strings. Useful for things like Dropdown Menu, where you just want to take up as much space as the content requires.
-  static double measureLongest(List<String> items, TextStyle style, [int? maxItems]) {
+  static double measureLongest(
+    List<String> items,
+    TextStyle style, [
+    int? maxItems,
+  ]) {
     double l = 0;
     if (maxItems != null && maxItems < items.length) {
       items.length = maxItems;
@@ -41,8 +54,11 @@ mixin StringUtils {
     return '${s}s';
   }
 
-  static String titleCaseSingle(String s) => '${s[0].toUpperCase()}${s.substring(1)}';
-  static String titleCase(String s) => s.split(' ').map(titleCaseSingle).join(' ');
+  static String titleCaseSingle(String s) =>
+      '${s[0].toUpperCase()}${s.substring(1)}';
+  static String titleCase(String s) =>
+      s.split(' ').map(titleCaseSingle).join(' ');
 
-  static String defaultOnEmpty(String? value, String defaultValue) => isEmpty(value) ? defaultValue : value!;
+  static String defaultOnEmpty(String? value, String defaultValue) =>
+      isEmpty(value) ? defaultValue : value!;
 }
