@@ -89,6 +89,7 @@ class SettingScreen extends StatelessWidget {
                 ),
               ],
             ),
+            VSpace.lg,
           ],
         ),
       ),
@@ -97,6 +98,7 @@ class SettingScreen extends StatelessWidget {
 
   Widget _buildSection(String title, {required List<Widget> children}) {
     return Container(
+      width: double.infinity,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8.0),
